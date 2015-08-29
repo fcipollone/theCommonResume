@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <base href="{{ base }}">
+
+    <title>The Common Resume</title>
+
+    <link href="css/main.css" rel="stylesheet">
+
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="employers">The Common Resume</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="employers">Employers</a></li>
+            <li><a href="resume">Resume</a></li>
+            <li><a href="users/registration">Account</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div id="alerts"></div>
+
+    <div class="container-fluid theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>The Common Resume</h1>
+        <p>Make yourself accessible to hundreds of companies with the click of a button</p>
+      </div>
+
+      <div class="page-header">
+        <h1>Resume</h1>
+      </div>
+
+
+      <div id="registration-panel" class="container-fluid">
+        <form id="resume-add-form" class="form-horizontal" role="form" method="POST" action="resume" enctype="application/json" target="">
+<!-- Applicant Info Forms -->
+          <h1>Applicant Info</h1>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="applicant-address-input">Address:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="applicant-address-input" name="address" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="applicant-city-input">City:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="applicant-city-input" name="city" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="applicant-state-input">State:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="applicant-state-input" name="state" placeholder=" ">
+            </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="applicant-zip-input">Zip:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="applicant-zip-input" name="zip" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="applicant-phone-input">Phone:</label>
+            <div class="col-sm-10">
+              <input type="tel" class="form-control" id="applicant-phone-input" name="phone" placeholder=" ">
+            </div>
+<!-- School Info Forms -->
+          <h1>School Info</h1>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="school-name-input">School Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="school-name-input" name="school-name" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="school-city-input">School City:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="school-city-input" name="school-city" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="school-state-input">School State:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="school-state-input" name="school-state" placeholder=" ">
+            </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="school-major-input">Major:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="school-major-input" name="major" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="school-degree-input">Degree:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="school-degree-input" name="degree" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="school-gpa-input">GPA:</label>
+            <div class="col-sm-10">
+              <input type="number" class="form-control" id="school-gpa-input" name="gpa" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="school-grad-date-input">Graduation Date:</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="school-grad-date-input" name="grad-date" placeholder=" ">
+            </div>
+          </div>
+
+<!-- Work Experience Forms -->
+          <h1>Work Experience</h1>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="work-position-input">Position:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="work-position-input" name="position" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="work-company-input">Company:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="work-company-input" name="company" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="work-start-input">Start Date:</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="work-start-input" name="start" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="work-end-input">End Date:</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="work-end-input" name="end" placeholder=" ">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="work-description-input">Description:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="work-description-input" name="description" placeholder=" ">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!--<script src="js/restaurants.js"></script>-->
+    <script src="js/userregistration.js"></script>
+  </body>
+</html>
+
